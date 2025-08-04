@@ -12,7 +12,6 @@ export const ListBoxWarpper = ({ children }: { children: React.ReactNode }) => {
 
 export default async function TopicList() {
   const topics = await getTopics();
-  console.log(topics);
 
   return (
     <div>

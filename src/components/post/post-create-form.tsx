@@ -11,9 +11,7 @@ import React, { startTransition, useActionState } from "react";
 import * as actions from "@/actions";
 
 export default function PostCreateForm({ topicId }: { topicId: string }) {
-  console.log(topicId);
-
-  const [_state, creatPostAction, isPending] = useActionState(
+  const [state, creatPostAction, isPending] = useActionState(
     actions.createPost.bind(null, topicId),
     {
       errors: {},
@@ -41,19 +39,21 @@ export default function PostCreateForm({ topicId }: { topicId: string }) {
               name='title'
               label='Title'
               labelPlacement='outside'
-              placeholder='Name'
-              // isInvalid={!!state.errors.name}
-              // errorMessage={state.errors.name?.[0]}
+              placeholder='Title'
+              isInvalid={!!state.errors.title}
+              errorMessage={state.errors.title?.[0]}
             />
             <Textarea
               name='content'
               label='Content'
               labelPlacement='outside'
               placeholder='Content'
-              // isInvalid={!!state.errors.description}
-              // errorMessage={state.errors.description?.[0]}
+              isInvalid={!!state.errors.content}
+              errorMessage={state.errors.content?.[0]}
             />
-
+            {state.errors._form?.[0] && (
+              <div className='text-red-500'>{state.errors._form?.[0]}</div>
+            )}
             <Button isLoading={isPending} type='submit' color='secondary'>
               Create
             </Button>

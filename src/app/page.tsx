@@ -7,7 +7,6 @@ import PostList from "@/components/post/post-list";
 
 export default async function App() {
   const topPosts = await fetchTopPosts();
-  console.log(topPosts);
   return (
     <>
       <div className='flex justify-between'>

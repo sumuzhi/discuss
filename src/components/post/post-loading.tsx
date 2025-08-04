@@ -5,10 +5,14 @@ export default function PostLoading() {
   return (
     <div>
       <div className='my-2'>
-        <Skeleton />
+        <Skeleton className='w-3/5 rounded-lg'>
+          <div className='h-6 w-full rounded-lg bg-secondary' />
+        </Skeleton>
       </div>
-      <div className='p-4 border rounded'>
-        <Skeleton />
+      <div className=' mt-2  rounded'>
+        <Skeleton className='w-4/5 rounded-lg'>
+          <div className='h-6 w-full rounded-lg bg-secondary' />
+        </Skeleton>
       </div>
     </div>
   );

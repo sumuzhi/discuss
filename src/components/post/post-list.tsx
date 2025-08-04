@@ -11,7 +11,6 @@ type PostList = {
 
 export default function PostList({ postList }: { postList: PostList[] }) {
   const router = useRouter();
-  console.log(postList);
   return (
     <div className='w-[300px]'>
       <Listbox

@@ -10,7 +10,7 @@ export default async function PostShow({ postId }: { postId: string }) {
   return (
     <div>
       <h1 className='text-2xl font-bold my-2'>{post.title}</h1>
-      <p className='p-4 border rounded'>{post.content}</p>
+      <p className='p-4 border border-gray-300 bg-gray-100 rounded'>{post.content}</p>
     </div>
   );
 }
