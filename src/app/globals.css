@@ -1,26 +1,109 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@plugin './hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+.not-found {
+  .cls-1 {
+    fill: #d6b49a;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .cls-1,
+  .cls-10,
+  .cls-11,
+  .cls-13,
+  .cls-14,
+  .cls-15,
+  .cls-17,
+  .cls-2,
+  .cls-4,
+  .cls-5,
+  .cls-6 {
+    stroke: #000;
+  }
+  .cls-1,
+  .cls-11,
+  .cls-13,
+  .cls-14,
+  .cls-16,
+  .cls-8 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .cls-1,
+  .cls-10,
+  .cls-11,
+  .cls-12,
+  .cls-13,
+  .cls-14,
+  .cls-15,
+  .cls-16,
+  .cls-17,
+  .cls-2,
+  .cls-3,
+  .cls-4,
+  .cls-5,
+  .cls-6,
+  .cls-7,
+  .cls-8,
+  .cls-9 {
+    stroke-width: 3px;
+  }
+  .cls-2 {
+    fill: #020202;
+  }
+  .cls-10,
+  .cls-12,
+  .cls-15,
+  .cls-17,
+  .cls-2,
+  .cls-3,
+  .cls-4,
+  .cls-5,
+  .cls-6,
+  .cls-7,
+  .cls-9 {
+    stroke-miterlimit: 10;
+  }
+  .cls-3 {
+    fill: #818181;
+  }
+  .cls-12,
+  .cls-16,
+  .cls-3,
+  .cls-7,
+  .cls-8,
+  .cls-9 {
+    stroke: #191818;
+  }
+  .cls-4 {
+    fill: #dcdbda;
+  }
+  .cls-5 {
+    fill: #4ea7f1;
+  }
+  .cls-14,
+  .cls-6 {
+    fill: #f8f3ed;
+  }
+  .cls-16,
+  .cls-7 {
+    fill: #333;
+  }
+  .cls-13,
+  .cls-8 {
+    fill: none;
+  }
+  .cls-9 {
+    fill: #f8f59c;
+  }
+  .cls-10,
+  .cls-11 {
+    fill: #f3d2c9;
+  }
+  .cls-15 {
+    fill: #8bb174;
+  }
+  .cls-17 {
+    fill: #da4e22;
+  }
 }
