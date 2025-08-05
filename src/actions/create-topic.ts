@@ -1,6 +1,7 @@
 "use server";
 import { auth } from "@/auth";
 import { prisma } from "@/dd";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 z.config(z.locales.zhCN());
@@ -70,5 +71,6 @@ export async function createTopic(
       },
     };
   }
+  revalidatePath("/");
   redirect(`/topics/${data.id}`);
 }
